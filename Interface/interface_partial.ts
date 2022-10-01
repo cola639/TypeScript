@@ -3,13 +3,13 @@ interface Person {
   age: number
 }
 
-// error
+// error 'age' is missing in type '{ name: string; }'
 const tom: Person = {
-  name: 'tom',
+  name: 'tom'
 }
 
 type optionalPerson = Partial<Person>
 // ok
 const john: optionalPerson = {
-  name: 'john',
+  name: 'john'
 }
