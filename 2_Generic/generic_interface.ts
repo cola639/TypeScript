@@ -3,4 +3,4 @@ interface GenericIdentityFn {
   <T>(arg: T): T
 }
 
-let myIdentity: GenericIdentityFn = identity
+let myIdentity: GenericIdentityFn
