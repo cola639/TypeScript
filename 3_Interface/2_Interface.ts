@@ -39,7 +39,7 @@ stringArr = ['Bob', 'Fred']
 interface NumberDictionary {
   [index: string]: number
   length: number //ok,length is number type
-  name: string // error,name is not number type
+  //  name: string // error,name is not number type
 }
 
 // 4_interface set readonly indexable
@@ -47,7 +47,7 @@ interface ReadonlyStringArray {
   readonly [index: number]: string
 }
 let readonlyArr: ReadonlyStringArray = ['Alice', 'Bob']
-readonlyArr[0] = 'Mallory' // error! Index signature in type 'ReadonlyStringArray' only permits
+// readonlyArr[0] = 'Mallory' // error! Index signature in type 'ReadonlyStringArray' only permits
 
 // 5_interface class implements
 interface ClockInterface {

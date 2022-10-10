@@ -31,11 +31,11 @@ x = ['hello', 10] // OK
 x = [10, 'hello'] // Error
 
 // 6_assertion
-// 6-1_<type>
+// 6-1_<type>value
 let stringValue: any = 'this is a string'
 let stringLength: number = (<string>stringValue).length
 
-// 6-2_as type
+// 6-2_value as type
 let someValue: any = 'this is a string'
 let someValueLength: number = (someValue as string).length
 

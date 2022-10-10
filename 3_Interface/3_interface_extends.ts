@@ -48,8 +48,8 @@ class Button extends Control implements SelectableControl {
 }
 
 // error: Property 'state' is missing in type 'Image'
-class Image implements SelectableControl {
-  select() {}
-}
+// class Image implements SelectableControl {
+//   select() {}
+// }
 
 export {}

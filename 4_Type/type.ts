@@ -2,8 +2,9 @@ type FC<P = {}> = FunctionComponent<P>
 
 interface FunctionComponent<P = {}> {
   displayName: string | undefined
+  (source: string, subString: string): boolean
 }
 
-let a: FunctionComponent = { displayName: '1222' }
+let a: FC<string> = { displayName: '123' }
 
 export {}
