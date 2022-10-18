@@ -28,7 +28,7 @@ const sum1 = (a: number, b: number): number => {
 // 5_Tuple
 let x: [string, number]
 x = ['hello', 10] // OK
-x = [10, 'hello'] // Error
+// x = [10, 'hello'] // Error
 
 // 6_assertion
 // 6-1_<type>value
