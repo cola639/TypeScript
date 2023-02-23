@@ -53,9 +53,12 @@ interface IChildren {
 }
 
 interface IArraryObj {
-  [index: number]: { id: number; label: string; key: number; children: IChildren }
+  id: number
+  label: string
+  key: number
+  children: IChildren
 }
 
-const arrObj: IArraryObj = [{ id: 0, label: '0', key: 0, children: { x: 0, y: 0 } }]
+const arrObj: IArraryObj[] = [{ id: 0, label: '0', key: 0, children: { x: 0, y: 0 } }]
 
 export {}

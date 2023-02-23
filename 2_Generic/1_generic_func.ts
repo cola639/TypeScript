@@ -1,4 +1,4 @@
-// 1_generic before used
+// 1_Generic before used
 function identityBefore1(arg: number): number {
   return arg
 }
@@ -20,7 +20,7 @@ const identityArrow = <T>(arg: T): T => {
   return arg
 }
 
-// 2_generic Array error
+// 2_Generic Array error
 function loggingIdentity<T>(arg: T): T {
   // console.log(arg.length) // Error: T doesn't have .length
   return arg

@@ -1,4 +1,4 @@
-// 1-1_function
+// 1-1_Generic function
 interface GenericIdentityFn<T> {
   (arg: T): T
 }
@@ -12,7 +12,7 @@ let myIdentity: GenericIdentityFn<number> = identity
 myIdentity(123) // OK
 // myIdentity('123') // Error
 
-// 1-2_function
+// 1-2_Generic function
 interface CreateArrayFunc {
   <T>(length: number, value: T): Array<T>
 }
