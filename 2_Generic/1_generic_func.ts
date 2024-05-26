@@ -19,6 +19,10 @@ const identityExpression = function <T>(arg: T): T {
 const identityArrow = <T>(arg: T): T => {
   return arg
 }
+// equal to
+type IdentityFunctionType<T> = (arg: T) => T
+
+const identityArrow2: IdentityFunctionType<number> = arg => arg
 
 // 2_Generic Array error
 function loggingIdentity<T>(arg: T): T {

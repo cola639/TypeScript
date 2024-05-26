@@ -1,0 +1,14 @@
+{
+  "name": "typescript-knowledge-record",
+  "version": "1.0.0",
+  "description": "A TypeScript project to record and manage knowledge points",
+  "main": "dist/index.js",
+  "scripts": {
+    "start": "ts-node-dev --respawn --transpile-only src/index.ts",
+    "build": "tsc"
+  },
+  "devDependencies": {
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^4.0.0"
+  }
+}
