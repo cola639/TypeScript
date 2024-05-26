@@ -41,3 +41,17 @@ function loggingIndentityPassArr2<T>(arg: Array<T>): Array<T> {
   console.log(arg.length)
   return arg
 }
+
+// <T>(arg: T[]): T[] Generic Parameter Declaration <T>:
+
+// The <T> after the function name is the generic parameter declaration. Here, we declare a generic parameter named T.
+// T is a placeholder that can represent any type and will be determined when the function is called.
+// Function Parameter arg: T[]:
+
+// The arg parameter is a generic array, meaning it is an array of type T.
+// Since T is defined as a generic parameter in the function declaration,
+// it can be any type such as number, string, object, etc.
+
+// Return Type T[]:
+// The function also returns an array of type T.
+// This ensures that the type of the returned array matches the type of the input array.
