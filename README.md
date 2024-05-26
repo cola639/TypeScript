@@ -1,10 +1,9 @@
 # Prepare
 
 ```
-  node v
-  npm i -g
-
-
+  npm install
+  npm start
+  npm run build
 
 ```
 
