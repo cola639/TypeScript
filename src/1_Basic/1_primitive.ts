@@ -2,6 +2,7 @@
 let isDone: boolean = true
 
 // 2_number
+console.log('hello world')
 const b: number = 10 //const asign  must have value
 let num1: number = 10 // equal to let a = 10;
 let num2: number // let asign not must have value
