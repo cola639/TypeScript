@@ -1,12 +1,8 @@
 # Prepare
 
 ```
+  node 14.21.0
   npm install
-  npm start
   npm run build
-
+  complier to dist
 ```
-
-# TypeScript
-
-TypeScript Syntax
