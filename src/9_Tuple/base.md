@@ -125,3 +125,99 @@ person = [25, 'John'] // 正确
 - **元组** 是一种特殊的数组，允许在一个数组中存放不同类型的固定数量的元素。
 - 元组具有**固定长度**，每个元素的类型都是提前定义好的。
 - 它们适合用于**函数返回多个不同类型值**或表示具有固定结构的数据。
+
+在 TypeScript 中，**元组（Tuple）** 是一种特殊的数组类型，它允许我们定义一个固定数量和类型的元素。与普通数组不同，元组中的每个元素类型可以是不同的。在 TypeScript 中，使用 **`[type1, type2, ...]`** 的形式来声明元组。
+
+### **基本的元组声明**
+
+以下是声明元组类型的基本形式：
+
+```typescript
+// 声明一个包含两个元素的元组，第一个是 string 类型，第二个是 number 类型
+let person: [string, number]
+
+person = ['Alice', 25] // 正确
+// person = [25, "Alice"]; // 错误，类型不匹配
+
+// 访问元组中的值
+const name = person[0] // 类型推断为 string
+const age = person[1] // 类型推断为 number
+```
+
+### **带类型约束的元组**
+
+元组的类型和长度是固定的，不能随意更改其类型或长度。例如：
+
+```typescript
+// 定义一个固定长度的元组
+let tuple: [number, string, boolean]
+
+tuple = [1, 'Hello', true] // 正确
+// tuple = [1, "Hello"];    // 错误，长度不匹配
+// tuple = ["Hello", 1, true]; // 错误，类型顺序不匹配
+```
+
+### **元组的使用场景**
+
+元组通常用于函数的返回值，特别是在返回多个值但每个值类型不同的情况下。
+
+#### **示例：函数返回元组**
+
+```typescript
+// 返回一个元组，包含一个 string 和一个 number
+function getPersonInfo(): [string, number] {
+  return ['Alice', 25]
+}
+
+const [name, age] = getPersonInfo() // 解构赋值
+console.log(name, age) // 输出: Alice 25
+```
+
+### **元组中的可选元素（Rest 元组）**
+
+TypeScript 4.0 之后引入了 **Rest 元组类型**，它允许元组中的元素数量不固定。例如：
+
+```typescript
+// 第一个元素必须是 string 类型，后面的元素可以是多个 number 类型
+type StringAndNumbers = [string, ...number[]]
+
+let example: StringAndNumbers
+
+example = ['Alice', 1, 2, 3] // 正确
+example = ['Bob', 10] // 正确
+// example = ["Charlie", "anotherString"]; // 错误，第二个元素及之后应该是 number 类型
+```
+
+### **可选元组元素**
+
+在元组中也可以定义某些可选的元素，类似于可选属性的概念：
+
+```typescript
+// 第一个元素是 string，第二个元素是可选的 number
+let personWithOptionalAge: [string, number?]
+
+personWithOptionalAge = ['Alice'] // 正确
+personWithOptionalAge = ['Alice', 25] // 正确
+// personWithOptionalAge = [25];          // 错误，第一个元素必须是 string
+```
+
+### **只读元组**
+
+可以使用 `readonly` 关键字来声明元组为只读，这样就无法修改元组的内容：
+
+```typescript
+// 声明只读元组
+let readonlyTuple: readonly [string, number] = ['Alice', 25]
+
+// 错误：无法修改只读元组
+// readonlyTuple[0] = "Bob";  // 报错，元组是只读的
+```
+
+### **总结**
+
+- **元组** 是一种特殊的数组类型，允许元素具有不同的类型。
+- 元组的长度和每个元素的类型是固定的，不能随意更改。
+- 元组可以用于函数返回多个不同类型的值，或用于定义长度固定、类型不同的列表。
+- TypeScript 还支持可选元组元素、Rest 元组和只读元组，以增强类型安全性和灵活性。
+
+你可以根据需要使用元组来更精确地描述数据结构。
